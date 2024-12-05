@@ -6,7 +6,7 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/download')
+@app.route('/antworten/download')
 def generate_file():
     def generate():
         chunk_size = 1024 * 1024
