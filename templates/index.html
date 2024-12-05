@@ -3,132 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landesstudienkolleg Halle - Antworten für Tests und Klausuren</title>
+    <title>Landesstudienkolleg Halle - Antworten</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
     <style>
         /* Global Styles */
         body {
-            font-family: 'Unbounded', sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
             min-height: 100vh;
-            text-align: center;
-            background: linear-gradient(135deg, #3b0078, #6e1c91, #9c5dbd);
-            background-size: 300% 300%;
+            background: #1e1e2f;
             color: #ffffff;
-            animation: gradient 15s ease infinite;
-        }
-
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
         }
 
         /* Header */
         header {
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.3);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            text-align: center;
+            margin-bottom: 40px;
         }
 
         header h1 {
-            font-size: 2.5rem;
-            font-weight: 900;
+            font-size: 3rem;
+            font-weight: 800;
+            text-transform: uppercase;
             margin: 0;
-            text-shadow: 2px 2px 10px #000000;
-            animation: crank 10s ease-in-out infinite;
+            color: #ff445e;
         }
 
         /* Main Content */
         main {
-            flex-grow: 1;
-            padding: 20px;
+            text-align: center;
+            max-width: 600px;
+            padding: 0 20px;
         }
 
         h2 {
-            font-size: 2rem;
-            font-weight: 800;
-            text-shadow: 2px 2px 10px #000000;
-            margin-top: 30px;
-            animation: crank 10s ease-in-out infinite;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
         }
 
         p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            max-width: 600px;
-            margin: 20px auto;
-            text-indent: 40px;
-            animation: crank 12s ease-in-out infinite alternate;
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.6;
+            margin: 20px 0;
         }
 
         .subjects-title {
             font-size: 1.5rem;
-            font-weight: 700;
-            margin: 30px auto 20px;
+            font-weight: 600;
+            margin: 40px 0 20px;
         }
 
         .subjects {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 20px 0 40px;
-            animation: crank 14s ease-in-out infinite alternate;
+            margin: 20px 0;
         }
 
         .subject {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 15px 20px;
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 10px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+            background: #282845;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
-        .subject span {
-            font-size: 1.2rem;
-        }
-
-        .checkmark {
-            font-size: 1.5rem;
-            color: #00ffcc;
-            animation: crank 16s ease-in-out infinite;
+        .subject:hover {
+            transform: scale(1.05);
+            background: #333353;
         }
 
         /* Button */
         button {
-            background-color: #6e1c91;
+            background-color: #ff445e;
             color: white;
+            font-size: 1rem;
+            font-weight: 600;
             padding: 15px 30px;
-            font-size: 1.2rem;
-            font-weight: 700;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             cursor: pointer;
-            text-shadow: 1px 1px 5px #000000;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
-            transition: all 0.3s ease;
-            margin-top: 20px;
-            animation: crank 10s ease-in-out infinite alternate;
+            margin-top: 40px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
         button:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
+            background-color: #ff6f86;
+            transform: translateY(-5px);
         }
 
         .file-size {
-            font-size: 1rem;
-            color: #f5f5f5;
-            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #a0a0b5;
+            margin-top: 10px;
+            margin-bottom: 80px;
         }
 
         /* Footer */
@@ -138,51 +117,33 @@
             padding: 10px 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.3);
         }
-
-        /* Keyframes */
-        @keyframes crank {
-            0% { transform: rotate(0deg) scale(1); }
-            25% { transform: rotate(0.5deg) scale(1.01); }
-            50% { transform: rotate(-0.5deg) scale(0.99); }
-            75% { transform: rotate(0.3deg) scale(1); }
-            100% { transform: rotate(0deg) scale(1); }
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Landesstudienkolleg Halle</h1>
+        <h1>Stk Halle</h1>
+        <h1>LEAKED ARCHIV</h1>
     </header>
     <main>
         <h2>Antworten für Tests und Klausuren 📚</h2>
-        <p>Dieses Archiv ist ein <strong>Big Tonka</strong> voller Wissen! 🌌 Es enthält Lösungen für unglaubliche <strong>146 verschiedene Prüfungsoptionen</strong>. 🤓✨</p>
-        <p>Twizzy-Alert! Diese Antworten sind geleakt und werden zu 100% 🔮 in den nächsten Prüfungen auftauchen! 🚀🔥</p>
-        <p class="subjects-title">Enthaltene Fächer:</p>
+        <p>Dieses Archiv ist eine umfangreiche Sammlung voller Wissen! Es enthält Lösungen für beeindruckende <strong>420 verschiedene Prüfungsoptionen</strong>. 🌌</p>
+        <p>Achtung: Diese Antworten wurden geleakt und könnten mit hoher Wahrscheinlichkeit in den kommenden Prüfungen vorkommen! 🔮</p>
+        <p class="subjects-title">Inhalt:</p>
         <div class="subjects">
-            <div class="subject">
-                <span class="checkmark">✔️</span>
-                <span>Chemie</span>
-            </div>
-            <div class="subject">
-                <span class="checkmark">✔️</span>
-                <span>Deutsch</span>
-            </div>
-            <div class="subject">
-                <span class="checkmark">✔️</span>
-                <span>Informatik</span>
-            </div>
-            <div class="subject">
-                <span class="checkmark">✔️</span>
-                <span>Mathematik</span>
-            </div>
-            <div class="subject">
-                <span class="checkmark">✔️</span>
-                <span>Physik</span>
-            </div>
+            <div class="subject">Aufnahmeteste</div>
+            <div class="subject">Biologie</div>
+            <div class="subject">Chemie (T/M)</div>
+            <div class="subject">Deutsch</div>
+            <div class="subject">Englisch (G/W)</div>
+            <div class="subject">Geschichte (G/W)</div>
+            <div class="subject">Informatik (T/W)</div>
+            <div class="subject">Literatur</div>
+            <div class="subject">Mathematik (T/W/M)</div>
+            <div class="subject">Physik (T/M)</div>
+            <div class="subject">Sozialkunde (G/W)</div>
+            <div class="subject">Wirtschaft</div>
         </div>
-        <a href="/antworten/download">
-            <button>⬇️ Big Body Datei herunterladen</button>
-        </a>
+        <button>⬇️ Datei herunterladen</button>
         <p class="file-size">Dateigröße: ca. 1 TB 💾</p>
     </main>
     <footer>
