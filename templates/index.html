@@ -117,39 +117,112 @@
             padding: 10px 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.3);
         }
+
+        .image-frame {
+            position: relative;
+            display: inline-block;
+            padding: 20px;
+            background: linear-gradient(45deg, #ff007c, #7000ff, #00ffff, #ff007c);
+            background-size: 400% 400%; /* Animates the gradient */
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(255, 0, 124, 0.8), 0 0 50px rgba(112, 0, 255, 0.6), 0 0 70px rgba(0, 255, 255, 0.7);
+            animation: glowing 6s ease-in-out infinite, rotateFrame 12s linear infinite;
+            transform: rotateX(15deg);
+            transition: transform 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        .image-frame:hover {
+            transform: rotateX(0deg) scale(1.1);
+            filter: brightness(1.2);
+        }
+
+        .image-frame img {
+            display: block;
+            max-width: 100%;
+            border-radius: 10px;
+            transform: scale(1) rotate(-2deg);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-frame:hover img {
+            transform: scale(1.1) rotate(0deg);
+        }
+
+        /* Glitch Effect */
+        .image-frame:hover:before,
+        .image-frame:hover:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            background: linear-gradient(45deg, transparent, rgba(255, 0, 124, 0.5), transparent);
+            animation: glitch 0.5s infinite;
+        }
+
+        .image-frame:hover:after {
+            animation: glitch 0.5s infinite alternate;
+            background: linear-gradient(135deg, transparent, rgba(0, 255, 255, 0.5), transparent);
+        }
+
+        /* Keyframes for Animations */
+        @keyframes glowing {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes rotateFrame {
+            0% { transform: rotateX(15deg) rotateY(0deg); }
+            50% { transform: rotateX(15deg) rotateY(180deg); }
+            100% { transform: rotateX(15deg) rotateY(360deg); }
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0, 0); }
+            33% { transform: translate(-5px, -5px); }
+            66% { transform: translate(5px, 5px); }
+            100% { transform: translate(0, 0); }
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Stk Halle</h1>
-        <h1>LEAKED ARCHIV</h1>
+        <h1>Stk Hallë</h1>
+        <h1>LËAKËD ARCHIV</h1>
     </header>
     <main>
-        <h2>Antworten für Tests und Klausuren 📚</h2>
-        <p>Dieses Archiv ist eine umfangreiche Sammlung voller Wissen! Es enthält Lösungen für beeindruckende <strong>420 verschiedene Prüfungsoptionen</strong>. 🌌</p>
-        <p>Achtung: Diese Antworten wurden geleakt und könnten mit hoher Wahrscheinlichkeit in den kommenden Prüfungen vorkommen! 🔮</p>
+        <div class="image-frame">
+            <img src="media/Patron_with_Golden_Paw_award.jpg" alt="" width="250">
+        </div>
+        <h2>Antwortën für Tësts und Klausurën 📚</h2>
+        <p>Diësës Archiv ist ëinë umfangrëichë Sammlüng vollër Wissën! Ës enthält Lösüngën für beeindruckëndë <strong>420 vërschiëdënë Prüfungsoptionën</strong>. 🌌</p>
+        <p>Achtung: Diësë Antwortën wurdën gëläakt und könntën mit hohër Wahrscheinlichkeit in dën kommëndën Prüfüngën vorkommën! 🔮</p>
         <p class="subjects-title">Inhalt:</p>
         <div class="subjects">
-            <div class="subject">Aufnahmeteste</div>
-            <div class="subject">Biologie</div>
-            <div class="subject">Chemie (T/M)</div>
-            <div class="subject">Deutsch</div>
-            <div class="subject">Englisch (G/W)</div>
-            <div class="subject">Geschichte (G/W)</div>
+            <div class="subject">Aufnahmëtëstë</div>
+            <div class="subject">Biologië</div>
+            <div class="subject">Chëmië (T/M)</div>
+            <div class="subject">Dëutsch</div>
+            <div class="subject">Ënglisch (G/W)</div>
+            <div class="subject">Geschichtë (G/W)</div>
             <div class="subject">Informatik (T/W)</div>
-            <div class="subject">Literatur</div>
-            <div class="subject">Mathematik (T/W/M)</div>
+            <div class="subject">Litëratur</div>
+            <div class="subject">Mathëmatik (T/W/M)</div>
             <div class="subject">Physik (T/M)</div>
-            <div class="subject">Sozialkunde (G/W)</div>
+            <div class="subject">Sozialkundë (G/W)</div>
             <div class="subject">Wirtschaft</div>
         </div>
         <a href="/antworten/download">
-            <button>⬇️ Datei herunterladen</button>
+            <button>⬇️ Datëi herunterladen</button>
         </a>
-        <p class="file-size">Dateigröße: ca. 10 TB 💾</p>
+        <p class="file-size">Datëigrößë: ca. 10 TB 💾</p>
     </main>
     <footer>
-        * Der Eigentümer dieser Website übernimmt keine Verantwortung für Schäden an Ihrem Computer, die Sicherheit Ihrer Daten oder die Integrität Ihrer Festplatte nach dem Download. 🚨
-    </footer>
+        * Dër Eigentümër diësër Wëbsitë übërnimmt keinë Vërantwortung für Schäden an Ihrëm Computër, dië Sichërhëit Ihrër Datën odër dië Intëgrität Ihrër Fësstplattë nach dëm Download. 🚨
+    </footer>     
 </body>
 </html>
