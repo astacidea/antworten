@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antworten für Tests und Klausuren 📚</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Unbounded', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333333;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        h1 {
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 10px 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .subjects {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .subject {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 15px;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transform: rotateX(10deg) rotateY(-5deg);
+        }
+        .subject:hover {
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            transform: rotateX(0deg) rotateY(0deg) scale(1.05);
+        }
+        .subject span {
+            font-size: 1rem;
+        }
+        .checkmark {
+            font-size: 1.2rem;
+            color: #4CAF50;
+        }
+        button {
+            font-family: 'Unbounded', sans-serif;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #45a049;
+            transform: translateY(-3px);
+        }
+        .file-size {
+            font-size: 0.9rem;
+            color: #777777;
+            margin-top: 10px;
+        }
+        .leaked {
+            color: #FF4500;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+        .disclaimer {
+            font-size: 0.8rem;
+            color: #777777;
+            padding: 10px 20px;
+            background-color: #f1f1f1;
+            border-top: 1px solid #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Antworten für Tests und Klausuren 📚</h1>
+        <p>Dieses Archiv ist ein <strong>Wunder</strong>! 🌟 Es enthält Lösungen für unglaubliche <strong>146 verschiedene Prüfungsoptionen</strong>. 🤓✨</p>
+        <p class="leaked">Achtung! Diese Antworten sind geleakt. Sie werden zu 100% in den nächsten Prüfungen vorkommen! 😱🔥</p>
+        <p>Diese Antworten wurden durch Blut, Schweiß und nicht ganz ehrliche Wege beschafft, damit sich alle Studierenden entspannen können. 💉💪✨</p>
+        <p>Fächer, die bereits enthalten sind:</p>
+        <div class="subjects">
+            <div class="subject">
+                <span class="checkmark">✔️</span>
+                <span>Chemie</span>
+            </div>
+            <div class="subject">
+                <span class="checkmark">✔️</span>
+                <span>Deutsch</span>
+            </div>
+            <div class="subject">
+                <span class="checkmark">✔️</span>
+                <span>Informatik</span>
+            </div>
+            <div class="subject">
+                <span class="checkmark">✔️</span>
+                <span>Mathematik</span>
+            </div>
+            <div class="subject">
+                <span class="checkmark">✔️</span>
+                <span>Physik</span>
+            </div>
+        </div>
+        <a href="/download">
+            <button>⬇️ ZIP-Datei herunterladen</button>
+        </a>
+        <p class="file-size">Dateigröße: ca. 1 TB 💾</p>
+    </main>
+    <footer class="disclaimer">
+        * Der Eigentümer der Website ist nicht verantwortlich für die Integrität Ihres Computers, die Sicherheit und den Schutz Ihrer Dateien auf Ihrer Festplatte, nachdem Sie diese Datei heruntergeladen haben.
+    </footer>
+</body>
+</html>
