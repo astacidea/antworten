@@ -19,7 +19,7 @@ def generate_file():
 
     total_size = 10 * 1024 * 1024 * 1024 * 1024
     return Response(generate(), mimetype='application/octet-stream', headers={
-        "Content-Disposition": "attachment; filename=Ultimate_Answers_Studienkolleg_1TB.zip", "Content-Length": str(total_size),
+        "Content-Disposition": "attachment; filename=Ultimate_Answers_Studienkolleg_10TB.zip", "Content-Length": str(total_size),
     })
 
 if __name__ == '__main__':
