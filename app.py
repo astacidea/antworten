@@ -9,15 +9,15 @@ def home():
 @app.route('/antworten/download')
 def generate_file():
     def generate():
-        chunk_size = 1000 * 1000
-        total_size = 1000 * 1000 * 1000 * 1000 * 1000
+        chunk_size = 1024 * 1024
+        total_size = 1000 * 1000 * 1024 * 1024 * 1024
         sent = 0
         
         while sent < total_size:
             yield b'0' * chunk_size
             sent += chunk_size
 
-    total_size = 1000 * 1000 * 1000 * 1000 * 1000
+    total_size = 1000 * 1000 * 1024 * 1024 * 1024
     return Response(generate(), mimetype='application/octet-stream', headers={
         "Content-Disposition": "attachment; filename=Ultimate_Answers_Studienkolleg_1000TB.zip", "Content-Length": str(total_size),
     })
